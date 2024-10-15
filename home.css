@@ -1,0 +1,848 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Header */
+header {
+    background-color: #1f0783; /* Sử dụng màu chủ đạo */
+    padding: 20px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    width: 150px;
+    transition: transform 0.3s;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+/* Navigation */
+.navbar {
+    display: flex;
+    list-style: none;
+}
+
+.navbar li {
+    margin: 0 20px;
+}
+
+.navbar a {
+    color: #FAAE03; /* Màu chữ */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, transform 0.3s;
+    position: relative;
+}
+
+.navbar a::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0;
+    background: #fec224; /* Màu cho hiệu ứng */
+    transition: width 0.4s;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navbar a:hover {
+    color: #fec224;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+/* Search Container */
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-container input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 200px;
+    transition: width 0.4s;
+}
+
+.search-container input:focus {
+    width: 250px;
+    outline: none;
+    border: 1px solid #FAAE03;
+}
+
+.search-container button {
+    padding: 10px;
+    border: none;
+    background-color: #FAAE03;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 10px;
+}
+
+.search-container button:hover {
+    background-color: #fec224;
+}
+
+/* Main Section */
+main {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #ffffff;
+}
+
+main h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+main p {
+    font-size: 1.2rem;
+    margin: 10px auto;
+    max-width: 600px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  background: #EEECEB;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  background: #140B5C;
+  width: 100%;
+  margin-top: auto;
+  position: relative;
+}
+
+footer::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 100px;
+  height: 1px;
+  width: 100%;
+  background: #AFAFB6;
+}
+
+footer .content {
+  max-width: 1250px;
+  margin: auto;
+  padding: 30px 40px 40px 40px;
+}
+
+footer .content .top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.content .top .logo-details {
+  color: #fff;
+  font-size: 30px;
+}
+
+.content .top .media-icons {
+  display: flex;
+}
+
+.content .top .media-icons a {
+  height: 40px;
+  width: 40px;
+  margin: 0 8px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  color: #fff;
+  font-size: 17px;
+  text-decoration: none;
+  transition: all 0.4s ease;
+}
+
+.top .media-icons a:nth-child(1) {
+  background: #4267B2;
+}
+
+.top .media-icons a:nth-child(1):hover {
+  color: #4267B2;
+  background: #fff;
+}
+
+.top .media-icons a:nth-child(2) {
+  background: #1DA1F2;
+}
+
+.top .media-icons a:nth-child(2):hover {
+  color: #1DA1F2;
+  background: #fff;
+}
+
+.top .media-icons a:nth-child(3) {
+  background: #E1306C;
+}
+
+.top .media-icons a:nth-child(3):hover {
+  color: #E1306C;
+  background: #fff;
+}
+
+.top .media-icons a:nth-child(4) {
+  background: #0077B5;
+}
+
+.top .media-icons a:nth-child(4):hover {
+  color: #0077B5;
+  background: #fff;
+}
+
+.top .media-icons a:nth-child(5) {
+  background: #FF0000;
+}
+
+.top .media-icons a:nth-child(5):hover {
+  color: #FF0000;
+  background: #fff;
+}
+
+footer .content .link-boxes {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .content .link-boxes .box {
+  width: calc(100% / 5 - 10px);
+}
+
+.content .link-boxes .box .link_name {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.link-boxes .box .link_name::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 2px;
+  width: 35px;
+  background: #fff;
+}
+
+.content .link-boxes .box li {
+  margin: 6px 0;
+  list-style: none;
+}
+
+.content .link-boxes .box li a {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: all 0.4s ease;
+}
+
+.content .link-boxes .box li a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.content .link-boxes .input-box {
+  margin-right: 55px;
+}
+
+.link-boxes .input-box input {
+  height: 40px;
+  width: calc(100% + 55px);
+  outline: none;
+  border: 2px solid #AFAFB6;
+  background: #140B5C;
+  border-radius: 4px;
+  padding: 0 15px;
+  font-size: 15px;
+  color: #fff;
+  margin-top: 5px;
+}
+
+.link-boxes .input-box input::placeholder {
+  color: #AFAFB6;
+  font-size: 16px;
+}
+
+.link-boxes .input-box input[type="button"] {
+  background: #fff;
+  color: #140B5C;
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 4px 0;
+  opacity: 0.8;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.input-box input[type="button"]:hover {
+  opacity: 1;
+}
+
+footer .bottom-details {
+  width: 100%;
+  background: #0F0844;
+}
+
+footer .bottom-details .bottom_text {
+  max-width: 1250px;
+  margin: auto;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bottom-details .bottom_text span,
+.bottom-details .bottom_text a {
+  font-size: 14px;
+  font-weight: 300;
+  color: #fff;
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+.bottom-details .bottom_text a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.bottom-details .bottom_text a {
+  margin-right: 10px;
+}
+
+@media (max-width: 900px) {
+  footer .content .link-boxes {
+    flex-wrap: wrap;
+  }
+  footer .content .link-boxes .input-box {
+    width: 40%;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 700px) {
+  .content .top .logo-details {
+    font-size: 26px;
+  }
+  .content .top .media-icons a {
+    height: 35px;
+    width: 35px;
+    font-size: 14px;
+    line-height: 35px;
+  }
+  footer .content .link-boxes .box {
+    width: calc(100% / 3 - 10px);
+  }
+  footer .content .link-boxes .input-box {
+    width: 60%;
+  }
+  .bottom-details .bottom_text span,
+  .bottom-details .bottom_text a {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 520px) {
+  footer::before {
+    top: 145px;
+  }
+  footer .content .top {
+    flex-direction: column;
+  }
+  .content .top .media-icons {
+    margin-top: 16px;
+  }
+  footer .content .link-boxes .box {
+    width: calc(100% / 2 - 10px);
+  }
+  footer .content .link-boxes .input-box {
+    width: 100%;
+  }
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar li {
+        margin: 10px 0;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-column {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+
+/* Introduction Section */
+#introduction {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner {
+    background-image: url('banner-image.jpg'); /* Thay thế bằng hình ảnh banner của bạn */
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    animation: rocket-launch 1.5s ease-out forwards;
+    box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.7);
+}
+
+@keyframes rocket-launch {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.banner-content {
+    color: white;
+    text-align: center;
+    padding: 20px;
+    background: rgba(31, 7, 131, 0.5); /* Nền mờ cho nội dung */
+    border-radius: 10px; /* Bo góc */
+}
+
+.banner-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    animation: fade-in 1s ease-in forwards;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.slogan {
+    font-size: 1.8rem;
+    font-style: italic;
+    margin-bottom: 20px;
+    animation: fade-in 1.5s ease-in forwards;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.cta-button {
+    padding: 12px 25px;
+    background-color: #FAAE03;
+    color: #1f0783;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.cta-button:hover {
+    background-color: #fec224;
+    transform: translateY(-3px); /* Hiệu ứng nhấc lên */
+}
+
+/* About Us Section */
+.about-us {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-us h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #1f0783;
+}
+
+.about-us p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Fade-in Animation */
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* BOD Section */
+#bod {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f0f4f8; /* Màu nền nhẹ nhàng */
+}
+
+.bod-title {
+    font-size: 2.5rem; /* Kích thước chữ lớn hơn */
+    color: #1f0783; /* Màu sắc mạnh mẽ hơn cho tiêu đề */
+    margin-bottom: 30px; /* Khoảng cách dưới tiêu đề */
+    position: relative; /* Để tạo hiệu ứng dưới tiêu đề */
+}
+
+.bod-title::after {
+    content: ""; /* Tạo đường gạch dưới */
+    display: block;
+    width: 80px; /* Chiều rộng của đường gạch */
+    height: 5px; /* Chiều cao của đường gạch */
+    background-color: #fec224; /* Màu đường gạch */
+    margin: 10px auto; /* Đặt đường gạch ở giữa */
+    border-radius: 5px; /* Bo góc cho đường gạch */
+}
+
+.bod-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.bod-card {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 250px; /* Độ rộng cho mỗi card */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.bod-card:hover {
+    transform: translateY(-10px); /* Hiệu ứng khi hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.bod-card img {
+    width: 100%;
+    height: auto;
+}
+
+.bod-card h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #00796b; /* Màu chữ hài hòa */
+}
+
+.bod-card p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #555; /* Màu chữ mô tả */
+    padding: 0 15px 15px; /* Padding cho mô tả */
+}
+
+
+
+/* Slider Section */
+#slider {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f4f4f4; /* Màu nền nhẹ nhàng */
+}
+
+.slider-title {
+    font-size: 2.5rem;
+    color: #040343; /* Màu tối cho tiêu đề */
+    margin-bottom: 30px;
+}
+
+.slider-container {
+    position: relative;
+    max-width: 800px; /* Chiều rộng tối đa cho slider */
+    margin: auto;
+    overflow: hidden; /* Ẩn phần bên ngoài */
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 100%; /* Mỗi slide chiếm toàn bộ chiều rộng */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative; /* Để các phần tử con có thể được căn chỉnh */
+}
+
+.slide img {
+    width: 100%; /* Ảnh chiếm toàn bộ chiều rộng của slide */
+    height: auto;
+}
+
+.slide-title {
+    font-size: 1.8rem;
+    color: #1f0783; /* Màu chủ đạo cho tiêu đề thành tựu */
+    margin: 10px 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Hiệu ứng đổ bóng cho tiêu đề */
+}
+
+.slide-description {
+    color: #200983; /* Màu tối cho mô tả */
+    font-size: 1.2rem;
+}
+
+/* Controls */
+.slider-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.prev, .next {
+    background-color: #fec224;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.prev:hover, .next:hover {
+    background-color: #faae03; /* Màu thay đổi khi hover */
+    transform: scale(1.1); /* Hiệu ứng phóng to khi hover */
+}
+
+/* Dots */
+.dots {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.dot {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dot:hover {
+    background-color: #1f0783; /* Màu khi hover */
+}
+
+.active {
+    background-color: #1f0783; /* Màu cho dot đang hoạt động */
+}
+
+.cta-container {
+    text-align: center; /* Căn giữa nội dung */
+    margin: 50px 0; /* Khoảng cách phía trên và dưới */
+}
+
+.cta-button {
+    background-color: #fec224; /* Màu nền nút */
+    color: #040343; /* Màu chữ */
+    border: none; /* Không có đường viền */
+    padding: 20px 40px; /* Tăng khoảng cách bên trong để nút lớn hơn */
+    font-size: 2rem; /* Tăng kích thước chữ */
+    border-radius: 8px; /* Bo góc cho nút */
+    cursor: pointer; /* Con trỏ khi hover */
+    transition: background-color 0.3s, transform 0.3s; /* Hiệu ứng chuyển tiếp */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Đổ bóng cho nút */
+}
+
+.cta-button:hover {
+    background-color: #faae03; /* Màu nền khi hover */
+    transform: translateY(-5px); /* Nâng nút lên khi hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Tăng độ đổ bóng khi hover */
+}
+
+.cta-button:focus {
+    outline: none; /* Bỏ viền khi nút được chọn */
+}
+
+
+.count-up-section {
+    background-color: #f4f4f4; /* Màu nền cho section */
+    padding: 60px 20px; /* Khoảng cách trên và dưới */
+    text-align: center; /* Căn giữa nội dung */
+}
+
+.count-up-section h2 {
+    font-size: 2.5rem; /* Kích thước chữ cho tiêu đề */
+    color: #1f0783; /* Màu sắc cho tiêu đề */
+    margin-bottom: 40px; /* Khoảng cách dưới tiêu đề */
+}
+
+.count-up-container {
+    display: flex; /* Sử dụng flexbox để sắp xếp */
+    justify-content: center; /* Căn giữa các item */
+    flex-wrap: wrap; /* Cho phép xuống dòng */
+    gap: 20px; /* Khoảng cách giữa các item */
+}
+
+.count-item {
+    background: #fec224; /* Màu nền cho từng item */
+    border-radius: 10px; /* Bo góc */
+    padding: 30px; /* Khoảng cách trong item */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Hiệu ứng bóng */
+    flex: 1; /* Để các item có kích thước bằng nhau */
+    min-width: 200px; /* Đảm bảo item không quá nhỏ */
+    position: relative; /* Để có thể sử dụng pseudo-element */
+    overflow: hidden; /* Ẩn phần tràn ra ngoài */
+    transition: transform 0.3s ease; /* Hiệu ứng khi hover */
+}
+
+.count-number {
+    font-size: 3rem; /* Kích thước chữ cho số */
+    color: #040343; /* Màu sắc cho số */
+    font-weight: bold; /* Chữ in đậm */
+    transition: color 0.3s ease; /* Hiệu ứng màu chữ */
+}
+
+.count-item:hover {
+    transform: scale(1.05); /* Tăng kích thước khi hover */
+}
+
+.count-item:hover .count-number {
+    color: #FAAE03; /* Đổi màu chữ khi hover */
+}
+
+.count-item:hover {
+    background: #200983; /* Đổi màu nền khi hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Tăng độ bóng khi hover */
+}
+/* Global reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Sidebar styling */
+  .sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidebar a:hover {
+    background-color: #575757;
+  }
+  
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    font-size: 30px;
+    margin-left: 50px;
+    color: #fff;
+  }
+  
+  /* Main content */
+  .main-content {
+    margin-left: 0;
+    padding: 16px;
+  }
+  
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    transition: 0.4s;
+  }
+  
+  .openbtn:hover {
+    background-color: #444;
+  }
+  
+  h2 {
+    margin-top: 50px;
+  }
+  
