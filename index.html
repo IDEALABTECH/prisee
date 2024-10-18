@@ -1,65 +1,20 @@
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang Tuyển Dụng</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Nhúng CSS -->
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-
-</head>
-<body>
-    <header>
-        <h1>Trang Tuyển Dụng</h1>
-        <div class="search-filter">
-            <input type="text" id="search" placeholder="Tìm kiếm công việc..." />
-            <select id="office" onchange="filterJobs()">
-                <option value="all">Tất cả văn phòng</option>
-                <option value="office1">Văn phòng Hà Nội</option>
-                <option value="office2">Văn phòng Hồ Chí Minh</option>
-                <option value="office3">Văn phòng Đà Nẵng</option>
-            </select>
-        </div>
-    </header>
-    <main>
-        <div class="job-list">
-            <div class="job-item" data-office="office1">
-                <h3>Lập Trình Viên Frontend</h3>
-                <p>Mô tả công việc: Phát triển giao diện người dùng.</p>
-            </div>
-            <div class="job-item" data-office="office2">
-                <h3>Lập Trình Viên Backend</h3>
-                <p>Mô tả công việc: Phát triển logic phía server.</p>
-            </div>
-            <div class="job-item" data-office="office3">
-                <h3>Quản Lý Dự Án</h3>
-                <p>Mô tả công việc: Quản lý và giám sát tiến độ dự án.</p>
-            </div>
-            <div class="job-item" data-office="office1">
-                <h3>Nhân Viên Marketing</h3>
-                <p>Mô tả công việc: Thực hiện các chiến dịch marketing.</p>
-            </div>
-        </div>
-
-        <!-- Phần đơn điền ứng tuyển -->
-        <div class="application-form">
-            <h2>Đơn Ứng Tuyển</h2>
-            <form id="recruitForm">
-                <input type="text" id="name" placeholder="Họ và tên" required />
-                <input type="email" id="email" placeholder="Email" required />
-                <input type="tel" id="phone" placeholder="Số điện thoại" required />
-                <select id="position" required>
-                    <option value="">Chọn vị trí ứng tuyển</option>
-                    <option value="frontend">Lập Trình Viên Frontend</option>
-                    <option value="backend">Lập Trình Viên Backend</option>
-                    <option value="manager">Quản Lý Dự Án</option>
-                    <option value="marketing">Nhân Viên Marketing</option>
-                </select>
-                <input type="file" id="cv" accept=".pdf,.doc,.docx" required />
-                <button type="submit">Gửi Đơn Ứng Tuyển</button>
-            </form>
-        </div>
-    </main>
-    <script src="script.js"></script> <!-- Nhúng JavaScript -->
-</body>
-</html>
+<form action="https://getform.io/f/bmdpqjoa" method="POST">
+    <input type="text" name="name">
+    <input type="email" name="email">
+    <input type="text" name="message">
+    <!-- add hidden Honeypot input to prevent spams -->
+    <input type="hidden" name="_gotcha" style="display:none !important">
+    <!-- checkbox handle -->
+    <input type="checkbox" name="subscribe" value="yes" checked>
+    <input type="hidden" name="subscribe" value="no">
+    <!-- radio button handle -->
+    <input type="radio" name="gender" value="male" checked>
+    <input type="radio" name="gender" value="female">
+    <input type="radio" name="gender" value="other">
+    <!-- select field handle -->
+    <select name="work-experience">
+        <option value="one-year">0-1 years</option>
+        <option value="one-five-years">1-5 years</option>
+    </select>
+    <button type="submit">Send</button>
+</form>

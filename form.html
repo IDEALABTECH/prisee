@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Form</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #28a745;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        .success-message {
+            margin-top: 20px;
+            text-align: center;
+            color: #28a745;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Application Form</h1>
+        <form name="submit-to-google-sheet" id="application-form" method="POST" enctype="multipart/form-data">
+            <input name="name" type="text" placeholder="Full Name" required>
+            <input name="class" type="text" placeholder="Class" required>
+            <input name="school" type="text" placeholder="School" required>
+            <input name="email" type="email" placeholder="Email" required>
+            <input name="facebook" type="text" placeholder="Facebook Link" required>
+            <input name="position" type="text" placeholder="Position Applied For" required>
+            <input name="personality_test" type="text" placeholder="Personality Test" required>
+            <select name="part_of_prisee" required>
+                <option value="">Would you like to be part of PRISEE?</option>
+                <option value="YES">YES</option>
+                <option value="NO">NO</option>
+            </select>
+            <input type="file" name="cvFile" accept="application/pdf" required>
+            <button type="submit">Submit Application</button>
+            <div class="success-message" style="display:none;">Application submitted successfully!</div>
+        </form>
+    </div>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycby-nlp_XuPRDPkQ5qpucdRqYfMNuMnQuBymYfhNUZxbNcfFDnFib_DiU7fjpn2s1ZIU/exec'; // Replace with your Google Apps Script URL
+        const form = document.forms['submit-to-google-sheet'];
+        const successMessage = document.querySelector('.success-message');
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            
+            const formData = new FormData(form);
+            
+            fetch(scriptURL, { method: 'POST', body: formData })
+                .then(response => {
+                    if (response.ok) {
+                        successMessage.style.display = 'block';
+                        form.reset();
+                    } else {
+                        throw new Error('Network response was not ok.');
+                    }
+                })
+                .catch(error => console.error('Error!', error.message));
+        });
+    </script>
+</body>
+</html>
